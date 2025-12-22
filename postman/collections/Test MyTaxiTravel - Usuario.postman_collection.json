@@ -1,0 +1,134 @@
+{
+  "info": {
+    "_postman_id": "218cf31d-4dcc-473a-91e1-28ec9cf8b9e6",
+    "name": "Test MyTaxiTravel - Usuario",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Usuario",
+      "id": "55c462bb-2132-4bb0-94e3-a3e4d2777630",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Tian\",\r\n    \"primer_apellido\": \"Gonzalez\",\r\n    \"segundo_apellido\": \"Rodriguez\",\r\n    \"edad\": 21,\r\n    \"numero_identificacion\": 1456994,\r\n    \"email\": \"seb456gmail.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"documento\",\r\n    \"numero_telefono\": \"30035\",\r\n    \"fecha_nacimiento\": \"2004-10-09\",\r\n    \"calificacion_media\": 4.5,\r\n    \"contrasena\": \"Sebas204@\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuarios/createUsuario",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "createUsuario"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener Usuarios",
+      "id": "aa8e6faf-2ddc-4e59-9229-00321840d12d",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuarios/getUsuarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "getUsuarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener usuario ID",
+      "id": "82f981f7-0ced-4da9-97b7-6419f94acb35",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuarios/getUsuario/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "getUsuario",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Modificar Usuario ID",
+      "id": "b1025a6b-6cf0-4231-b2a9-58eabf5a6843",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_usuario\": 1,\r\n    \"nombre\": \"Tina\",\r\n    \"primer_apellido\": \"Gonzalez\",\r\n    \"segundo_apellido\": \"Rodriguez\",\r\n    \"edad\": 21,\r\n    \"numero_identificacion\": 565656,\r\n    \"email\": \"saass\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"documento\",\r\n    \"numero_telefono\": \"6566565\",\r\n    \"fecha_nacimiento\": \"2004-10-09\",\r\n    \"calificacion_media\": 4.5,\r\n    \"contrasena\": \"Sebas204@\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuarios/updateUsuario",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "updateUsuario"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Borrar usuario ID",
+      "id": "faaedfdc-501d-411b-8a3c-c097f25c98ea",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuarios/deleteUsuario/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuarios",
+            "deleteUsuario",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
