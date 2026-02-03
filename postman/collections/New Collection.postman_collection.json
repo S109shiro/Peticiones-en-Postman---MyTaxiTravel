@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "d9eb90e1-edbd-4441-8ec9-9aa2e8faea42",
+    "name": "Test MyTaxiTravel - Conductor",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear conductor",
+      "id": "1aef9c2a-a089-40e0-b15b-8cd3c3751dac",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"sANDRA\",\r\n    \"primer_apellido\": \"Gonzale\",\r\n    \"segundo_apellido\": \"Rojas\",\r\n    \"edad\": 48,\r\n    \"numero_identificacion\": 20879223,\r\n    \"email\": \"sandy7788@gmail.com\",\r\n    \"sexo\": \"Femenino\",\r\n    \"documento_identidad\": \"www,docucmento,web\",\r\n    \"numero_telefono\": \"3003358545\",\r\n    \"fecha_nacimiento\": \"1969-10-09\",\r\n    \"calificacion_media\": 5.0,\r\n    \"ganancias_mes\": 100.000,\r\n    \"ganancias_totales\": 51.000,\r\n    \"taxi_en_uso\": {\r\n        \"id_taxi\": 1\r\n    },\r\n    \"contrasena\": \"0000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/conductor/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "conductor",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mostrar datos conductor ID",
+      "id": "19759727-f4ed-4208-aadf-e2285bbd9e80",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/conductor/get/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "conductor",
+            "get",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mostrar todos los conductores",
+      "id": "4644db8e-4ab1-4437-9efa-262e77cd7066",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/conductor/getAll",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "conductor",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar conductor ID",
+      "id": "d48dee43-fe33-49b6-b365-d99e08b97fc6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_conductor\": 1,\r\n    \"nombre\": \"Sebas\",\r\n    \"primer_apellido\": \"\",\r\n    \"segundo_apellido\": \"\",\r\n    \"edad\": 50,\r\n    \"numero_identificacion\": 10,\r\n    \"email\": \"hfh\",\r\n    \"sexo\": \"\",\r\n    \"documento_identidad\": \"121\",\r\n    \"numero_telefono\": \"\",\r\n    \"fecha_nacimiento\": \"2004-10-09\",\r\n    \"calificacion_media\": 4.8,\r\n    \"ganancias_mes\": 10000,\r\n    \"ganancias_totales\": 5000,\r\n    \"taxi_en_uso\": {\r\n        \"id_taxi\": 1\r\n    },\r\n    \"contrasena\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/conductor/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "conductor",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar conductor ID",
+      "id": "6b6afb53-186f-456a-91ee-e7a6339286d8",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/conductor/delete1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "conductor",
+            "delete1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

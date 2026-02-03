@@ -1,19 +1,22 @@
 {
   "info": {
-    "_postman_id": "218cf31d-4dcc-473a-91e1-28ec9cf8b9e6",
+    "_postman_id": "ec7ca4ce-3f20-4bb1-b896-fb153a71a8ff",
     "name": "Test MyTaxiTravel - Usuario",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
       "name": "Crear usuario",
-      "id": "55c462bb-2132-4bb0-94e3-a3e4d2777630",
+      "id": "3b7c300a-eb8f-4f39-bd1e-51852fe90581",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"nombre\": \"\",\r\n    \"primer_apellido\": \"\",\r\n    \"segundo_apellido\": \"\",\r\n    \"edad\": 0,\r\n    \"numero_identificacion\": 0,\r\n    \"email\": \"\",\r\n    \"sexo\": \"\",\r\n    \"documento_identidad\": \"\",\r\n    \"numero_telefono\": \"\",\r\n    \"fecha_nacimiento\": \"2004-10-09\",\r\n    \"calificacion_media\": 0.0,\r\n    \"contrasena\": \"\"\r\n}",
+          "raw": "{\r\n    \"nombre\": \"Sebas\",\r\n    \"primer_apellido\": \"Gonza\",\r\n    \"segundo_apellido\": \"Rodri\",\r\n    \"edad\": 22,\r\n    \"numero_identificacion\": 51256,\r\n    \"email\": \"sebasgonra@\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"1016712994\",\r\n    \"numero_telefono\": \"3003367605\",\r\n    \"fecha_nacimiento\": \"2004-10-09\",\r\n    \"calificacion_media\": 4.0,\r\n    \"contrasena\": \"0000\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -21,36 +24,39 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8080/usuarios/createUsuario",
+          "raw": "http://localhost:8080/usuario/create",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "usuarios",
-            "createUsuario"
+            "usuario",
+            "create"
           ]
         }
       },
       "response": []
     },
     {
-      "name": "Mostrar datos usuario",
-      "id": "82f981f7-0ced-4da9-97b7-6419f94acb35",
+      "name": "Mostrar datos usuario ID",
+      "id": "a94543c6-452a-4e51-a55c-f95d6f06dbeb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/usuarios/getUsuario/1",
+          "raw": "http://localhost:8080/usuario/get/1",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "usuarios",
-            "getUsuario",
+            "usuario",
+            "get",
             "1"
           ]
         }
@@ -58,8 +64,35 @@
       "response": []
     },
     {
-      "name": "Modificar Usuario ID",
-      "id": "b1025a6b-6cf0-4231-b2a9-58eabf5a6843",
+      "name": "Mostrar todos los usuarios",
+      "id": "4417a6ae-5289-4be8-9f1c-48e0a601cdd7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuario/getAll",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Usuario ID",
+      "id": "cf818b1a-1277-4a53-9f03-22fddba52c46",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "PUT",
         "header": [],
@@ -73,15 +106,15 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8080/usuarios/updateUsuario",
+          "raw": "http://localhost:8080/usuario/update",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "usuarios",
-            "updateUsuario"
+            "usuario",
+            "update"
           ]
         }
       },
@@ -89,20 +122,23 @@
     },
     {
       "name": "Borrar usuario ID",
-      "id": "faaedfdc-501d-411b-8a3c-c097f25c98ea",
+      "id": "51bbddec-6122-4509-ac37-7b7db52afa9e",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/usuarios/deleteUsuario/1",
+          "raw": "http://localhost:8080/usuario/delete/1",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "usuarios",
-            "deleteUsuario",
+            "usuario",
+            "delete",
             "1"
           ]
         }

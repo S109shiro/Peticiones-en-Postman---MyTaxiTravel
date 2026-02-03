@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "a88c1190-04fe-4df2-b811-b8facd97d658",
+    "name": "Test MyTaxiTravel - Administrador",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Administrador",
+      "id": "a9c24496-ac1a-4dd3-b4a4-c850c073fc36",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Alejo\",\r\n    \"primer_apellido\": \"Gonzalez\",\r\n    \"segundo_apellido\": \"Rodriguez\",\r\n    \"edad\": 14,\r\n    \"numero_identificacion\": 1011206817,\r\n    \"email\": \"alejo@gmail.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"documento_identidad\": \"www.midocumento.com\",\r\n    \"numero_telefono\": \"3123349298\",\r\n    \"fecha_nacimiento\": \"2010-10-24\",\r\n    \"contrasena\": \"4208\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/administrador/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "administrador",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mostrar datos de un administrador ID",
+      "id": "c82a60ed-dc9a-4041-ac91-be402fc54de3",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/administrador/get/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "administrador",
+            "get",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener todos los administradores",
+      "id": "dd35e60c-1afb-43c0-8557-752427713819",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/administrador/getAll",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "administrador",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar administrador",
+      "id": "f49f6af2-8fa1-4395-92a8-465a965da76c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_administrador\": 1,\r\n    \"nombre\": \"\",\r\n    \"primer_apellido\": \"\",\r\n    \"segundo_apellido\": \"\",\r\n    \"edad\": 0,\r\n    \"numero_identificacion\": 5,\r\n    \"email\": \"4\",\r\n    \"sexo\": \"\",\r\n    \"documento_identidad\": \"\",\r\n    \"numero_telefono\": \"\",\r\n    \"fecha_nacimiento\": \"2004-10-21\",\r\n    \"contrasena\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/administrador/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "administrador",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar administrador ID",
+      "id": "4c2a6cc4-26a5-4a7e-a9d1-4e864c14fd09",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/administrador/delete/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "administrador",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
