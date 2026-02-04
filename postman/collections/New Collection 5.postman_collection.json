@@ -1,0 +1,109 @@
+{
+  "info": {
+    "_postman_id": "7cbcfdb2-bfb2-4630-b6f7-dc06aa58a749",
+    "name": "Test MyTaxiTravel - RegistroGPS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Registro GPS",
+      "id": "0fcc2259-1fea-4b53-899c-ea505ae281a3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"direccion_inicio\": \"Cra. 69a #1-69\",\r\n    \"direccion_destino\": \"Ak 15 #78-33\",\r\n    \"latitud_inicio\": 4.622734,\r\n    \"longitud_inicio\": -74.129357,\r\n    \"latitud_destino\": 4.664311,\r\n    \"longitud_destino\": -74.058418,\r\n    \"fecha_hora_inicio\": \"2025-02-04T14:30:00\",\r\n    \"fecha_hora_final\": \"2025-02-04T15:00:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/registroGPS/create",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "registroGPS",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener todos registros GPS",
+      "id": "90ae78b0-5017-4ea0-b483-936ef8cfc3a4",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/registroGPS/get/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "registroGPS",
+            "get",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar registro GPS ID",
+      "id": "9ee37691-b093-4141-9a6d-bee018a0a1e3",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_registro_viaje\": 1,\r\n    \"direccion_inicio\": \"Cra, 00 #1-8\",\r\n    \"direccion_destino\": \"Cra, 03 #1-8\",\r\n    \"latitud_inicio\": 1.255555,\r\n    \"longitud_inicio\": -74.594545,\r\n    \"latitud_destino\": 4.305089,\r\n    \"longitud_destino\": -74.852256,\r\n    \"fecha_hora_inicio\": \"2004-05-06T10:30:00\",\r\n    \"fecha_hora_final\": \"2004-05-06T13:00:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/registroGPS/update",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "registroGPS",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Registro GPS ID",
+      "id": "883c52a5-0117-40e2-afe0-1cd41a54c257",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/registroGPS/delete/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "registroGPS",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "67af1372-0e80-4af0-a623-b0c565cc0c07",
+    "name": "Test MyTaxiTravel - Reporte",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Reporte",
+      "id": "f7579894-e304-4284-be79-6e48f479b17c",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"fecha_reporte\" : \"2024-01-29\",\r\n    \"tipo_reporte\" : \"Mal servicio\",\r\n    \"detalles\" : \"Se me ofrecio un mal servicio por parte del conductor\",\r\n    \"encargado_reporte\" : {\r\n        \"id_administrador\": 1\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/reporte/create",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reporte",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener todos los reportes",
+      "id": "b07dde3d-cf62-4c7a-8c81-bba982811603",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/reporte/getAll",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reporte",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener reporte ID",
+      "id": "b8125ec4-e5d8-40fe-90af-199aeda4e18f",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/reporte/get/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reporte",
+            "get",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar reporte ID",
+      "id": "0e64168a-ac54-4cf3-b13e-65eddf909539",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_reporte\": 1,\r\n    \"fecha_reporte\" : \"2012-01-29\",\r\n    \"tipo_reporte\" : \"Cobro excesivo\",\r\n    \"detalles\" : \"Se presento un cobro excesivo a la hora de realizar el servicio\",\r\n    \"encargado_reporte\" : {\r\n        \"id_administrador\": 1\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/reporte/update",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reporte",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Borrar reporte ID",
+      "id": "1ce796a4-f013-4407-9ad0-753b78e8ddef",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/reporte/delete/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reporte",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

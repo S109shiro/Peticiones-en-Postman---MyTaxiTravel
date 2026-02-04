@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "89eddc75-185f-4f81-a57a-840049150343",
+    "name": "Test MyTaxiTravel - Taxi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Taxis",
+      "id": "e2c5a98f-d0c9-495a-80b6-2b9582fd77cd",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"placa\" : \"AAA000\",\r\n    \"modelo\" : \"Chevrolet\",\r\n    \"ultima_tecnico_mecanica\" : \"2026-10-24\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/taxi/create",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "taxi",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener todos los taxis",
+      "id": "29bf5ab7-ce65-4c94-b71b-31f004a15c7f",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/taxi/getAll",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "taxi",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener taxi ID",
+      "id": "20b64041-5f62-458f-bed1-3e69161dd66a",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/taxi/get/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "taxi",
+            "get",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar taxi ID",
+      "id": "5cefc42a-f244-461d-bfcb-ba548cd04065",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_taxi\": 1,\r\n    \"placa\" : \"CCC111\",\r\n    \"modelo\" : \"Honda\",\r\n    \"ultima_tecnico_mecanica\" : \"2014-10-24\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/taxi/update",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "taxi",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar taxi ID",
+      "id": "a21c394e-c3e0-4e00-bc78-65f6d33e0e70",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/taxi/delete/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "taxi",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
